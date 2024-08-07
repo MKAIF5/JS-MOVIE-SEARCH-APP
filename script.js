@@ -19,7 +19,7 @@ const getMovie = () => {
             .then(resp => resp.json())
             .then((data) => {
                 console.log(data);
-                if(data.Response){
+                if (data.Response) {
 
                     result.innerHTML = `
                     <div class="info">
@@ -52,13 +52,13 @@ const getMovie = () => {
                 else[
                     result.innerHTML = `<h3 class="msg">${data.Error}</h3>`
                 ]
-                })
-                .catch(() =>{
-                    result.innerHTML = `<h3 class="msg">Error Occured</h3>`
-                    searchButton.innerText = "Search"
-                })
-                
-            }
+            })
+            .catch(() => {
+                result.innerHTML = `<h3 class="msg">Error Occured</h3>`
+                searchButton.innerText = "Search"
+            })
+
+    }
 
 };
 
